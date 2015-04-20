@@ -1,0 +1,48 @@
+<resources>
+
+    <string name="app_name">ULP Kudus</string>
+    <string name="action_settings">Settings</string>
+    <string name="Berita">Berita</string>
+    <string name="Info_lelang">Informasi Lelang</string>
+    <string name="Pelayanan">Pelayanan</string>
+    <string name="Regulasi">Regulasi</string>
+    <string name="Kontak">Kontak</string>
+
+    <!-- Navigation Drawer -->
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Closed</string>
+
+    <!-- Nav Drawer List Item Titles -->
+    <string-array name="nav_list_title">
+        <item>Berita</item>
+        <item>Pengumuman</item>
+        <item>Informasi Lelang</item>
+        <item>Agenda</item>
+        <item>Pelayanan</item>
+        <item>Regulasi</item>
+        <item>Hubungi Kami</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Titles -->
+    <string-array name="nav_list_subtitle">
+        <item>Berita terkini dan terupdate</item>
+        <item>Pengumuman penting</item>
+        <item>Lelang terbaru</item>
+        <item>Daftar kegiatan ULP Kudus</item>
+        <item>Informasi pelayanan ULP Kudus</item>
+        <item>Peraturan lelang</item>
+        <item>Ajukan Pertanyaan Anda</item>
+    </string-array>
+
+    <!-- Nav Drawer List Icon Titles -->
+    <array name="nav_list_icons">
+        <item>@drawable/berita_master</item>
+        <item>@drawable/attention_icon</item>
+        <item>@drawable/infolelang</item>
+        <item>@drawable/agenda_icon</item>
+        <item>@drawable/pelayanan</item>
+        <item>@drawable/regulasi</item>
+        <item>@drawable/kontak</item>
+    </array>
+
+</resources>
