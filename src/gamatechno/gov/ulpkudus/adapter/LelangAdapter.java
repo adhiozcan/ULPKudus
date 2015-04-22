@@ -1,6 +1,6 @@
 package gamatechno.gov.ulpkudus.adapter;
 
-import gamatechno.gov.ulpkudus.model.LelangItem;
+import gamatechno.gov.ulpkudus.model.Lelang_M;
 import gamatechno.government.ulpkudus.R;
 
 import java.util.List;
@@ -16,9 +16,9 @@ import android.widget.TextView;
 public class LelangAdapter extends BaseAdapter {
 	private Context mContext;
 	private LayoutInflater inflater;
-	private List<LelangItem> lelangItem;
+	private List<Lelang_M> lelangItem;
 
-	public LelangAdapter(Context mContext, List<LelangItem> lelangItem) {
+	public LelangAdapter(Context mContext, List<Lelang_M> lelangItem) {
 		this.mContext = mContext;
 		this.lelangItem = lelangItem;
 	}
@@ -51,7 +51,7 @@ public class LelangAdapter extends BaseAdapter {
 		TextView date = (TextView) convertView.findViewById(R.id.date);
 		WebView content = (WebView) convertView.findViewById(R.id.content);
 
-		LelangItem item = lelangItem.get(position);
+		Lelang_M item = lelangItem.get(position);
 
 		title.setText(item.getTitle());
 		author.setText(item.getAuthor());

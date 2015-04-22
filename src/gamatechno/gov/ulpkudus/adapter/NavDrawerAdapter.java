@@ -1,6 +1,6 @@
 package gamatechno.gov.ulpkudus.adapter;
 
-import gamatechno.gov.ulpkudus.model.NavDrawerModel;
+import gamatechno.gov.ulpkudus.model.NavDrawer_M;
 import gamatechno.government.ulpkudus.R;
 import java.util.ArrayList;
 import android.annotation.SuppressLint;
@@ -15,10 +15,10 @@ import android.widget.TextView;
 
 public class NavDrawerAdapter extends BaseAdapter {
 	private Context context;
-	private ArrayList<NavDrawerModel> navDrawerItem;
+	private ArrayList<NavDrawer_M> navDrawerItem;
 
 	public NavDrawerAdapter(Context context,
-			ArrayList<NavDrawerModel> navDrawerItem) {
+			ArrayList<NavDrawer_M> navDrawerItem) {
 		this.context = context;
 		this.navDrawerItem = navDrawerItem;
 	}

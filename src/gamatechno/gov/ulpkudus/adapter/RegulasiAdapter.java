@@ -1,6 +1,6 @@
 package gamatechno.gov.ulpkudus.adapter;
 
-import gamatechno.gov.ulpkudus.model.RegulasiItem;
+import gamatechno.gov.ulpkudus.model.Regulasi_M;
 import gamatechno.government.ulpkudus.R;
 import java.util.List;
 import android.annotation.SuppressLint;
@@ -16,9 +16,9 @@ import android.widget.TextView;
 public class RegulasiAdapter extends BaseAdapter {
 	private Context mContext;
 	private LayoutInflater inflater;
-	private List<RegulasiItem> regulasiItem;
+	private List<Regulasi_M> regulasiItem;
 
-	public RegulasiAdapter(Context mContext, List<RegulasiItem> regulasiItem) {
+	public RegulasiAdapter(Context mContext, List<Regulasi_M> regulasiItem) {
 		this.mContext = mContext;
 		this.regulasiItem = regulasiItem;
 	}
@@ -52,7 +52,7 @@ public class RegulasiAdapter extends BaseAdapter {
 		TextView date = (TextView) convertView.findViewById(R.id.date);
 		WebView content = (WebView) convertView.findViewById(R.id.content);
 
-		RegulasiItem item = regulasiItem.get(position);
+		Regulasi_M item = regulasiItem.get(position);
 
 		title.setText(item.getTitle());
 		author.setText(item.getAuthor());

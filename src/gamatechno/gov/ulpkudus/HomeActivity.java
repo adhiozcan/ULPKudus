@@ -1,14 +1,15 @@
 package gamatechno.gov.ulpkudus;
 
 import gamatechno.gov.ulpkudus.adapter.NavDrawerAdapter;
-import gamatechno.gov.ulpkudus.fragment.AgendaFragment;
-import gamatechno.gov.ulpkudus.fragment.BeritaFragment;
-import gamatechno.gov.ulpkudus.fragment.KontakFragment;
-import gamatechno.gov.ulpkudus.fragment.LelangFragment;
-import gamatechno.gov.ulpkudus.fragment.PelayananFragment;
-import gamatechno.gov.ulpkudus.fragment.PengumumanFragment;
-import gamatechno.gov.ulpkudus.fragment.RegulasiFragment;
-import gamatechno.gov.ulpkudus.model.NavDrawerModel;
+import gamatechno.gov.ulpkudus.fragment.Agenda_Frag;
+import gamatechno.gov.ulpkudus.fragment.Berita_Frag;
+import gamatechno.gov.ulpkudus.fragment.Common_Frag;
+import gamatechno.gov.ulpkudus.fragment.Kontak_Frag;
+import gamatechno.gov.ulpkudus.fragment.Lelang_Frag;
+import gamatechno.gov.ulpkudus.fragment.Pelayanan_Frag;
+import gamatechno.gov.ulpkudus.fragment.Pengumuman_Frag;
+import gamatechno.gov.ulpkudus.fragment.Regulasi_Frag;
+import gamatechno.gov.ulpkudus.model.NavDrawer_M;
 import gamatechno.government.ulpkudus.R;
 
 import java.util.ArrayList;
@@ -32,7 +33,7 @@ import android.widget.ListView;
 
 public class HomeActivity extends ActionBarActivity {
 	private ActionBarDrawerToggle mDrawerToggle;
-	private ArrayList<NavDrawerModel> navDrawerItems;
+	private ArrayList<NavDrawer_M> navDrawerItems;
 
 	private DrawerLayout mDrawerLayout;
 	private NavDrawerAdapter adapter;
@@ -54,7 +55,7 @@ public class HomeActivity extends ActionBarActivity {
 		setup_navigation_drawer();
 
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-		ft.add(R.id._container, BeritaFragment.newInstance(getBaseContext()));
+		ft.add(R.id._container, Berita_Frag.newInstance(getBaseContext()));
 		ft.commit();
 
 	}
@@ -89,14 +90,14 @@ public class HomeActivity extends ActionBarActivity {
 			}
 		};
 
-		navDrawerItems = new ArrayList<NavDrawerModel>();
+		navDrawerItems = new ArrayList<NavDrawer_M>();
 		navMenuTitles = getResources().getStringArray(R.array.nav_list_title);
 		navMenuSubtitles = getResources().getStringArray(
 				R.array.nav_list_subtitle);
 		navMenuIcons = getResources().obtainTypedArray(R.array.nav_list_icons);
 
 		for (int i = 0; i < navMenuTitles.length; i++) {
-			navDrawerItems.add(new NavDrawerModel(navMenuTitles[i],
+			navDrawerItems.add(new NavDrawer_M(navMenuTitles[i],
 					navMenuSubtitles[i], navMenuIcons.getResourceId(i, -1)));
 		}
 
@@ -154,25 +155,26 @@ public class HomeActivity extends ActionBarActivity {
 
 			switch (position) {
 			case 0:
-				mFragment = BeritaFragment.newInstance(getBaseContext());
+				// mFragment = Berita_Frag.newInstance(getBaseContext());
+				mFragment = Common_Frag.newInstance(getBaseContext());
 				break;
 			case 1:
-				mFragment = PengumumanFragment.newInstance();
+				mFragment = Pengumuman_Frag.newInstance();
 				break;
 			case 2:
-				mFragment = LelangFragment.newInstance(getBaseContext());
+				mFragment = Lelang_Frag.newInstance(getBaseContext());
 				break;
 			case 3:
-				mFragment = AgendaFragment.newInstance();
+				mFragment = Agenda_Frag.newInstance();
 				break;
 			case 4:
-				mFragment = PelayananFragment.newInstance();
+				mFragment = Pelayanan_Frag.newInstance();
 				break;
 			case 5:
-				mFragment = RegulasiFragment.newInstance(getBaseContext());
+				mFragment = Regulasi_Frag.newInstance(getBaseContext());
 				break;
 			case 6:
-				mFragment = KontakFragment.newInstance();
+				mFragment = Kontak_Frag.newInstance();
 				break;
 			}
 
